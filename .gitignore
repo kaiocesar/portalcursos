@@ -41,6 +41,10 @@ coverage.xml
 .mr.developer.cfg
 .project
 .pydevproject
+.idea
+backend/venv/include/
+backend/venv/scripts/
+
 
 # Rope
 .ropeproject
