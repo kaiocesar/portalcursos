@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
+import json
 from google.appengine.ext import ndb
 
-# atalho alt + enteder para importar
+# atalho alt + enter para importar
+from protorpc.protojson import json
+
+
 class Curso(ndb.Model):
     nome=ndb.StringProperty()
     preco=ndb.FloatProperty()
@@ -26,6 +30,8 @@ def listar(_resp):
         return dct
 
     lista_cursos= [to_dict(c) for c in query.fetch()]
-    jsontxt= Json.dumps(lista_cursos)
+
+
+    jsontxt=json.dumps(lista_cursos)
 
     _resp.write(jsontxt)
