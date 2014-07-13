@@ -1,0 +1,27 @@
+{% extends 'templates/cursos/layout.html' %}
+{% block body %}
+
+    <div class="container">
+        <h1>Listagem dos cursos</h1>
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <td><b>Cod.</b></td>
+                    <td><b>Curso</b></td>
+                    <td><b>Valor</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for curso in cursos %}
+                    <tr>
+                        <td>{{ curso.id }}</td>
+                        <td>{{ curso.nome }}</td>
+                        <td>R$ {{ curso.preco }}</td>
+                    </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div><!-- .container -->
+
+{% endblock %}
