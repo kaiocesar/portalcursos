@@ -1,8 +1,12 @@
 {% extends 'templates/cursos/layout.html' %}
 {% block body %}
 
-    <div class="container">
-        <h1>Listagem dos cursos</h1>
+        
+        <h1>Listagem dos cursos <a href="/curso/crud/form" class="btn btn-default btn-success pull-right">Adicionar</a></h1>
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="active">Listagem de cursos</li>
+        </ol>
         <table class="table table-responsive">
             <thead>
                 <tr>
@@ -19,9 +23,8 @@
                         <td>R$ {{ curso.preco }}</td>
                     </tr>
                 {% endfor %}
-
             </tbody>
         </table>
-    </div><!-- .container -->
+
 
 {% endblock %}

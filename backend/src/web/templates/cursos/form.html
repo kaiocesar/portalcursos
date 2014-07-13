@@ -1,0 +1,32 @@
+{% extends 'templates/cursos/layout.html' %}
+{% block body %}
+
+<h1>Adicionar cursos</h1>
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li><a href="/curso/rest/listar_html">Listagem de cursos</a></li>
+            <li class="active">Adicionar curso</li>
+        </ol>
+<form class="form-horizontal" role="form" action="{{ salvar_url }}" method="post" >
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Nome:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="nome" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Preço:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="preco" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Cadastrar</button>
+    </div>
+  </div>
+</form>
+
+
+{% endblock %}
