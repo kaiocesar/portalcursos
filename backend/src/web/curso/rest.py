@@ -27,3 +27,7 @@ def listar_html(_write_tmpl):
     query = Curso.query().order(Curso.preco)
     cursos = [to_dict(c) for c in query.fetch()]
     _write_tmpl("templates/cursos/listagem.html", {'cursos':cursos})
+
+
+def editar(nome, preco):
+    pass

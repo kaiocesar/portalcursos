@@ -16,6 +16,15 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/curso/rest/listar_html">Cursos</a></li>
             </ul>
+
+            <div class="nav navbar-right">
+                {% if _usuario_logado %}
+                    <a href="{{ _logout_url }}" class="btn btn-default btn-danger" style="margin:10px 0 0 0;" ><span class="glyphicon glyphicon-log-out"></span> Sair</a>
+                {% else %}
+                    <a href="{{ _login_url }}" class="btn btn-default btn-success" style="margin:10px 0 0 0;" > Login com Gmail</a>
+                {% endif %}
+            </div>
+
         </div>
     </nav>
 
