@@ -17,13 +17,14 @@
                 <li><a href="/curso/rest/listar_html">Cursos</a></li>
             </ul>
 
-            <div class="nav navbar-right">
+            <ul class="nav navbar-right" style="margin:5px 0 0 0;">
                 {% if _usuario_logado %}
-                    <a href="{{ _logout_url }}" class="btn btn-default btn-danger" style="margin:10px 0 0 0;" ><span class="glyphicon glyphicon-log-out"></span> Sair</a>
+                    <li class="pull-left" style="color: #FFF;margin: 0 16px 0 0;line-height: 37px;"><p>{{ _usuario_logado.nome }}</p></li>
+                    <li class="pull-left" ><a href="{{ _logout_url }}" class="btn btn-default btn-danger" ><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
                 {% else %}
-                    <a href="{{ _login_url }}" class="btn btn-default btn-success" style="margin:10px 0 0 0;" > Login com Gmail</a>
+                    <li class="pull-left"><a href="{{ _login_url }}" class="btn btn-default btn-success"  > Login com Gmail</a></li>
                 {% endif %}
-            </div>
+            </ul>
 
         </div>
     </nav>
